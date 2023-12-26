@@ -1,0 +1,29 @@
+
+<!-- To display the employee details entered by admin -->
+<h4 class="h4-style">Welcome</h4>
+<h1>{{ user[0].username }}</h1>
+
+<div class="profile">
+<div class="profile__sec2">  
+    <div class="profile__sec2__imageholder">
+        <img src="./assets/images/profilepic/person-img.jpg" alt="profile">
+    </div>
+
+    <div class="profile__sec2__info">
+        <h6>#ID:{{ user[0].id}}</h6>
+        <h6>Email:{{ user[0].email}}</h6>
+        <h6>Job Role:{{user[0].role }}</h6>
+        <h6>Contact:{{ user[0].phone }}</h6>
+        <h6>DOB:{{ user[0].dob}}</h6>
+    </div>
+    <div class="profile__sec2__info">
+        <h6>Blood Group:{{user[0].blood_grp}}</h6>
+        <h6>Age:{{ user[0].age}}</h6>
+        <h6>Gender:{{ user[0].gender}}</h6>
+      
+      
+    </div>
+    <router-outlet></router-outlet>
+</div>
+  
+</div>

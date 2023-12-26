@@ -1,0 +1,78 @@
+html, body {
+  margin: 0;
+}
+
+.container-fluid {
+  display: flex;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  padding: 0;
+  flex-direction: column;
+}
+
+.hr-navbar {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(24, 164, 245);
+}
+
+.hr-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  left: 0;
+}
+
+.hr-home {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.hr-home__content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.hr-home__sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: rgb(234, 244, 244);
+  height: 703px;
+  padding-top: 50px;
+}
+.hr-home__list {
+  list-style-type: none;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.hr-home__list:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+.hr-home a {
+  text-decoration: none;
+}
+.hr-home .btn-logout {
+  border: none;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(234, 244, 244);
+  color: blue;
+}
+.hr-home .btn-logout:hover {
+  background-color: #fff;
+}/*# sourceMappingURL=hr-dashboard.component.css.map */

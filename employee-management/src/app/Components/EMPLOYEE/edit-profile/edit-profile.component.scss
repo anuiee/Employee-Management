@@ -1,0 +1,24 @@
+.create-emp{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    // background-color: aqua;
+    justify-content: center;
+}
+.error-text{
+    color: rgb(234, 98, 98);
+}
+.btn{
+    width: 300px;
+    margin-left: 50px;
+}
+.h4-style{
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color:rgb(21, 80, 231);
+    padding: 50px;
+}
+.star-style{
+    color: red;
+    padding: 10px;
+}

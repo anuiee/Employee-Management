@@ -1,0 +1,86 @@
+<!-- Window to create/add new employee -->
+
+<div class="create-emp">
+<h4 class="h4-style">Add New Member!</h4>
+<form [formGroup]="myForm" (ngSubmit)="getUserData()">
+   
+  
+  <div class="row">
+    <div class="col">
+      <label>Full name <span class="star-style">*</span></label>
+    <input type="text" class="form-control" placeholder="Fullname" name="username" formControlName="username"  required >
+    <span class="error-text" *ngIf="user && user.touched && user.invalid">This field is invalid(digits or special characters are not allowed)</span><br>
+    <br></div>
+    <div class="col">
+      <label>Age <span class="star-style">*</span></label>
+    <input type="text" class="form-control" placeholder="Age" name="age" formControlName="age"  required>
+    <span class="error-text" *ngIf="agefun && agefun.invalid && agefun.touched">This field is invalid,(Age should be digit)</span>
+    <br></div>
+  </div>  
+  <div class="row"> 
+    <div class="col">
+      <label>Date of Birth <span class="star-style">*</span></label>
+    <input type="date" class="form-control" placeholder="DOB" name="dob" formControlName="dob"  required>
+    <span class="error-text" *ngIf="dobfun && dobfun.invalid && dobfun.touched">This field is invalid</span>
+    <br></div>
+    <div class="col">
+      <label>Blood Group <span class="star-style">*</span></label>
+    <input type="text" class="form-control" placeholder="Blood Group" name="blood_grp" formControlName="blood_grp"  required>
+    <span class="error-text" *ngIf="blood_grp_fun && blood_grp_fun.invalid && blood_grp_fun.touched">This field is invalid</span>
+    <br></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Gender <span class="star-style">*</span></label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio"  value="Male" name="gender" formControlName="gender"  required>
+      <label>Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio"  value="Female" name="gender" formControlName="gender"  required>
+      <label >Female</label>
+    </div>
+    <span class="error-text" *ngIf="gender_fun && gender_fun.invalid && gender_fun.touched">Select gender</span>
+    </div>
+    <div class="col">
+    <label>Role<span class="star-style">*</span></label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio"  value="employee"  formControlName="role"  required>
+      <label>Employee</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio"  value="admin"  formControlName="role"  required>
+      <label>Admin</label>
+    </div>
+    <!-- <span class="error-text" *ngIf="gender_fun && gender_fun.invalid && gender_fun.touched">Select Job role</span> -->
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
+      <label>Email Id <span class="star-style">*</span></label>
+    <input type="text" class="form-control"  placeholder="email" name="email"  formControlName="email" required>
+    <span class="error-text" *ngIf="emailId && emailId.invalid && emailId.touched">This field is invalid(enter a valid email id)</span>
+    <br></div>
+    <div class="col">
+      <label>Phone <span class="star-style">*</span></label>
+    <input type="text" class="form-control"  placeholder="Phone" name="phone"  formControlName="phone" required>
+    <span class="error-text" *ngIf="phone_fun && phone_fun.invalid && phone_fun.touched">This field is invalid(Enter a valid phone number)</span>
+    <br></div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Password <span class="star-style">*</span></label>
+    <input type="text" class="form-control"  placeholder="Password" name="password"  formControlName="password" required>
+    <span class="error-text" *ngIf="password && password.invalid && password.touched">This field is invalid</span>
+    <br></div>
+    <div class="col">
+      <label>Profile Picture <span class="star-style">*</span></label>
+    <input type="file"  name="image" class="form-control" formControlName="image"  required>
+    <span class="error-text" *ngIf="image_fun && image_fun.invalid && image_fun.touched">Upload Photo</span>
+    </div>
+  </div>
+
+    <button class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
+    
+  </form>
+</div>

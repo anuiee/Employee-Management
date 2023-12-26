@@ -1,0 +1,15 @@
+
+
+<!-- Bar chart to display leave details of employees -->
+<h6 class="h6-style">Leave Graph</h6>
+
+<div class="col">
+
+<canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [type]="'bar'">
+</canvas>
+</div>

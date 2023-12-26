@@ -1,0 +1,17 @@
+<!-- This is the Login window  -->
+<div class="container-fluid">
+    <div class="login-background" style="background-image: url(./assets/images/bg-img2.jpg);"></div>
+    <div class="login-container">
+    <h3 class="login-container__h3">Login</h3>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+      <p style="color: red;">{{authError}}</p>
+        <input type="email" class="form-control" placeholder="UserId" name="email" ngModel  required>
+        <span *ngIf="userEmail && userEmail.invalid && userEmail.touched">This field is not valid</span>
+        <br><br>
+        <input type="password" class="form-control"  placeholder="Password" name="password"  ngModel required>
+        <span *ngIf="password && password.invalid && password.touched">This field is not valid</span>
+        <br><br>
+        <button  class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+      </form>
+  </div>  
+</div>

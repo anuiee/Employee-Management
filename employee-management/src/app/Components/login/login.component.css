@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 703px;
+  background-color: #fff;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #fff;
+}
+.login-container__h3 {
+  color: rgb(10, 65, 246);
+}
+
+.login-background {
+  display: flex;
+  width: 60%;
+  height: 600px;
+  background-color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  width: 200px;
+  margin-left: 100px;
+}/*# sourceMappingURL=login.component.css.map */

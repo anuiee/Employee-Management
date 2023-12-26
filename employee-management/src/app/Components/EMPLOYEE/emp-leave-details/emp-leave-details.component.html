@@ -1,0 +1,17 @@
+
+<!-- To display the leave details of the  employee  -->
+
+<h4 class="h4-style">Your Leave Details</h4>
+
+<div *ngFor="let item of jsonData ; index as i">
+
+
+    <div class="profile__sec2__info">
+        <h6>Leave Option:{{ item.leave_type }}</h6>
+        <h6>Reason:{{ item.reason }}</h6>
+        <h6>From Date:{{ item.fromDate }}</h6>
+        <h6>To Date:{{ item.toDate }}</h6>
+        <h6 style="color:red;">Status:{{ item.status }}</h6>
+    </div>
+</div>
+

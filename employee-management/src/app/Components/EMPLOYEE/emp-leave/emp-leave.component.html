@@ -1,0 +1,50 @@
+
+<!-- This window enables the employee to apply for leave -->
+
+<form  [formGroup]="leaveForm" (ngSubmit)="applyLeave()">
+
+  <h4 class="h4-style">Apply For Leave</h4>
+    <div class="row"><div class="col">
+      <label >ID:{{ user[0].id }} <span class="star-style">*</span></label>
+      <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="userid" formControlName="userid"  required>
+        <option selected value="{{ user[0].id }}">{{ user[0].id }}</option></select>
+    </div></div>
+    <div class="row">
+      <div class="col">
+        <label>Select Leave Type<span class="star-style">*</span></label>
+          <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="leave_type" formControlName="leave_type"  required>
+          <option value="Sick">Sick</option>
+          <option value="Vacation">Vacation</option>
+          <option value="Maternity">Maternity</option>
+          </select>
+          <span class="error-text" *ngIf="type && type.touched && type.invalid">This field is invalid</span><br>
+      </div>
+      
+      <div class="col">
+        <label>Reason<span class="star-style">*</span></label>
+      <textarea type="text" class="form-control" rows="2" placeholder="Reason" name="reason" formControlName="reason"  required ></textarea>
+      <span class="error-text" *ngIf="reason_fun && reason_fun.touched && reason_fun.invalid">This field is invalid</span><br>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        <label>From:<span class="star-style">*</span></label>
+        <input type="date"  name="fromDate" class="form-control" formControlName="fromDate"  required>
+        <span class="error-text" *ngIf="from_Date && from_Date.touched && from_Date.invalid">This field is invalid</span><br>
+
+      </div>
+
+        <div class="col">
+        <label>To:<span class="star-style">*</span></label>
+        <input type="date"  name="toDate" class="form-control" formControlName="toDate"  required>
+        <span class="error-text" *ngIf="to_Date && to_Date.touched && to_Date.invalid">This field is invalid</span><br>
+
+      </div>
+
+      </div>
+      <br><br>
+      <button class="btn btn-primary" [disabled]="leaveForm.invalid">Apply</button>
+      
+     
+</form>
+<br>

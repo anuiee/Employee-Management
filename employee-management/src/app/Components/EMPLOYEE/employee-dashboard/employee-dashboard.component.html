@@ -1,0 +1,27 @@
+<!-- This is the employee dashboard window -->
+<div class="container-fluid">
+    <div class="hr-navbar">
+        <p class="hr-navbar__code-logo"><i class="bi bi-code-square"></i></p>
+          <h4>EMPLOYEE DASHBOARD</h4>
+    </div>
+
+    <div class="hr-home">
+        <div class="hr-home__sidebar">
+            <div>
+              
+                    <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('emp-profile')">Dash board</button></div>
+                    <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('emp-leave')">Apply Leave</button></div>
+                    <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('emp-leave-details')">Leave Details</button></div>
+                    <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('emp-settings')">Account</button></div>
+                    <div  class="hr-home__list"><button class="btn-blue" (click)="logout()">Logout</button></div>
+               
+            </div>
+        </div>
+        <div class="hr-home__content">
+            <!-- Welcome {{user | json}} -->
+            <ng-container *ngComponentOutlet ="comp"></ng-container>
+            <router-outlet></router-outlet></div>
+    </div>   
+</div>
+
+

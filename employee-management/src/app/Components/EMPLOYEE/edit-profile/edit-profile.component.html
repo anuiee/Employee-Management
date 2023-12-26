@@ -1,0 +1,49 @@
+
+  <!-- This window enables the employee to edit some of their personal information -->
+   
+  <router-outlet></router-outlet>
+    
+    <div class="create-emp">
+      
+    <form (ngSubmit)="updateUserData(f)" #f="ngForm">
+      <h4 class="h4-style">Edit Your Profile</h4>
+        <div *ngIf="employee">
+        <div class="row">
+          <div class="col">
+          <label>Age<span class="star-style">*</span></label>
+          <input type="text" class="form-control" placeholder="Age" name="age" [(ngModel)]="employee.age" pattern="[0-9]{2}" #age="ngModel"  required>
+          <div *ngIf="age.errors?.['required']">this is required.</div>
+          <div *ngIf="age.errors?.['pattern']">Enter Your age in 2 digit.</div>
+          <br><br>
+          </div>
+        </div>  
+        <div class="row"> 
+          <div class="col">
+          <label>DOB<span class="star-style">*</span></label>
+          <input type="date" class="form-control" placeholder="DOB" name="dob" [(ngModel)]="employee.dob" #dob="ngModel"  required>
+          <div *ngIf="dob.errors?.['required']">date is required.</div><br><br>
+          </div>
+          <div class="col">
+          <label>Blood Group<span class="star-style">*</span></label>
+          <input type="text" class="form-control" placeholder="Blood Group" name="blood_grp" [(ngModel)]="employee.blood_grp" #blood_grp="ngModel"   required>
+          <div *ngIf="blood_grp.errors?.['required']">This field is required.</div><br><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label>Gender<span class="star-style">*</span></label>
+            <input type="text" class="form-control"  placeholder="Gender" name="gender"  [(ngModel)]="employee.gender" #gender="ngModel" required>
+            <div *ngIf="gender.errors?.['required']">This field is required.</div><br><br>
+          </div>
+      </div>
+        <div class="row">
+          <div class="col">
+          <label>Phone<span class="star-style">*</span></label>
+          <input type="text" class="form-control"  placeholder="Phone" name="phone" pattern="[0-9]{10}"  [(ngModel)]="employee.phone" #phone="ngModel" required>
+          <div *ngIf="phone.errors?.['required']">This field is required.</div>
+          <div *ngIf="phone.errors?.['pattern']">Enter a valid 10 digit phone number.</div>          
+          </div></div><br><br>
+          <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+        </div>
+        </form>
+    </div>

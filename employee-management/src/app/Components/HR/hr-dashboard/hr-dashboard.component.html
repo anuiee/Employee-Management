@@ -1,0 +1,43 @@
+
+<!-- HR / Admin Dashboard -->
+
+<div class="container-fluid">
+    <div class="hr-navbar">
+        <p class="hr-navbar__code-logo"><i class="bi bi-code-square"></i></p>
+          <h4>HR DASHBOARD</h4>
+    </div>
+
+    <div class="hr-home">
+        <div class="hr-home__sidebar">
+            <div>
+                <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('hr-home')"><i class="bi bi-house-door-fill icon-style"></i>Dash board</button></div>
+                <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('create-employee')"><i class="bi bi-file-earmark-plus-fill icon-style"></i>create</button></div>
+                <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('leave-list')"><i class="bi bi-envelope-fill icon-style"></i>Leave List</button></div>
+                <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('employee-list')"><i class="bi bi-person-lines-fill icon-style"></i>Employee List</button></div>
+                <!-- <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('leave-chart')">Leave Chart</button></div> -->
+                <!-- <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('activity-chart')">Activity Chart</button></div> -->
+                <div class="hr-home__list"><button class="btn-blue" (click)="logout()"><i class="bi bi-door-closed-fill icon-style"></i>Logout</button></div>
+
+            </div>
+        </div>
+          <!-- sliding -->
+          <div class=" sidebar-2">
+            <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('hr-home')"><i class="bi bi-house-door-fill icon-style"></i></button></div>
+            <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('create-employee')"><i class="bi bi-file-earmark-plus-fill icon-style"></i></button></div>
+            <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('leave-list')"><i class="bi bi-envelope-fill icon-style"></i></button></div>
+            <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('employee-list')"><i class="bi bi-person-lines-fill icon-style"></i></button></div>
+            <!-- <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('leave-chart')">Leave Chart</button></div> -->
+            <!-- <div class="hr-home__list"><button class="btn-blue" type="button" (click)="detectComp('activity-chart')">Activity Chart</button></div> -->
+            <div class="hr-home__list"><button class="btn-blue" (click)="logout()"><i class="bi bi-door-closed-fill icon-style"></i></button></div>
+
+          </div>
+
+        <!-- sliding -->
+
+        <div class="hr-home__content">
+            <ng-container *ngComponentOutlet ="comp"></ng-container>
+           
+        </div>
+    </div>   
+</div>
+

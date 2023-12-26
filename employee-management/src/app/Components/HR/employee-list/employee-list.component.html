@@ -1,0 +1,38 @@
+
+<!-- to view all employees as a list with edit and delete option -->
+
+<h4 class="h4-style">Employee List</h4>
+<div *ngFor="let item of jsonData ; index as i">
+<div class="profile" >
+    <div class="profile__header">
+       
+        <div><button type="button" class="btn btn-primary" data-bs-toggle="button" (click)="activate( item.id )">Status-{{item.activity}}</button></div>
+        <div  class="profile__id"><h6>ID: {{item.id}}</h6></div>
+        <div class="profile__name_head"><h3>{{item.username}}</h3></div>
+        <div class="buttons">
+        <div><a routerLink="/{{ item.id }}/edit" >Edit</a></div>
+        <div><button class="btn btn-danger"  (click)="delete( item.id )">Delete</button></div>
+        </div>
+    </div> 
+    <div class="profile__sec2">  
+        <div class="profile__sec2__imageholder">
+            <img src="./assets/images/profilepic/person-img.jpg" alt="profile">
+        </div>
+
+        <div class="profile__sec2__info">
+            <h6>Full Name:{{ item.username }}</h6>
+            <h6>Job Role:{{ item.role }}</h6>
+            <h6>Email Id:{{ item.email }}</h6>
+            <h6>Contact:{{ item.phone }}</h6>
+        </div>
+        <div class="profile__sec2__info">
+            <h6>#ID:{{ item.id }}</h6>
+            <h6>Blood Group:{{ item.blood_grp }}</h6>
+            <h6>DOB:{{ item.dob }}</h6>
+            <h6>Age:{{ item.age }}</h6>
+            <h6>Gender:{{ item.gender }}</h6>
+        </div>
+    </div> 
+    
+</div>
+</div>

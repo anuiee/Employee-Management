@@ -1,0 +1,15 @@
+.create-emp {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-text {
+  color: rgb(234, 98, 98);
+}
+
+.btn {
+  width: 300px;
+  margin-left: 100px;
+}/*# sourceMappingURL=create-employee.component.css.map */

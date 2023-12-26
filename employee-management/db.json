@@ -1,0 +1,150 @@
+{
+  "authentication": [
+    {
+      "username": "admin",
+      "password": "admin@123",
+      "id": 1
+    }
+  ],
+  "logindata": [
+    {
+      "username": "Jijith JK",
+      "email": "lijinambalavattath@gmail.com",
+      "age": "25",
+      "role": "admin",
+      "blood_grp": "gdrf",
+      "phone": "8921539656",
+      "gender": "ghf",
+      "image": "C:\\fakepath\\person2.jpg",
+      "password": "1234567",
+      "dob": "2023-12-23",
+      "id": "admin",
+      "activity": "Active"
+    },
+    {
+      "username": "Leanne Graham",
+      "age": "23",
+      "blood_grp": "O+ve",
+      "gender": "male",
+      "dob": "1999-11-18",
+      "phone": "6547898765",
+      "image": "C:\\fakepath\\person1.jpg",
+      "email": "lena@123",
+      "role": "employee",
+      "password": "lenalena123",
+      "id": "1",
+      "activity": "Active"
+    },
+    {
+      "username": "Abhi",
+      "email": "admin@123",
+      "age": "25",
+      "role": "employee",
+      "blood_grp": "O+ve",
+      "phone": "6547898765",
+      "gender": "Male",
+      "image": "C:\\fakepath\\person-img.jpg",
+      "password": "abhi.123",
+      "dob": "1999-12-14",
+      "id": "7PLPE7d",
+      "activity": "Active"
+    },
+    {
+      "username": "surya",
+      "age": "25",
+      "blood_grp": "O+ve",
+      "gender": "Male",
+      "dob": "2017-10-11",
+      "phone": "8921539656",
+      "image": "C:\\fakepath\\person2.jpg",
+      "email": "abc@123",
+      "role": "employee",
+      "password": "abc1234",
+      "id": "lUyJJFq",
+      "activity": "Disabled"
+    },
+    {
+      "username": "Jijith JK",
+      "age": "25",
+      "blood_grp": "b+",
+      "gender": "Male",
+      "dob": "2023-12-28",
+      "phone": "6547898765",
+      "image": "C:\\fakepath\\person2.jpg",
+      "email": "jj@k.com",
+      "role": "employee",
+      "password": "jkjkjk",
+      "id": "_IZNDPf",
+      "activity": "Active"
+    },
+    {
+      "username": "Anushree Das",
+      "age": "25",
+      "blood_grp": "gdrf",
+      "gender": "Female",
+      "dob": "2023-12-20",
+      "phone": "8921539659",
+      "image": "C:\\fakepath\\person-img.jpg",
+      "email": "anushreedaspt@gmail.com",
+      "role": "employee",
+      "password": "anuanu",
+      "id": "hqSEncW",
+      "activity": "Active"
+    }
+  ],
+  "leave_register": [
+    {
+      "leave_type": "Sick",
+      "reason": "fdsgd",
+      "fromDate": "2023-12-21",
+      "toDate": "2023-12-18",
+      "userid": "7PLPE7d",
+      "id": 7,
+      "status": "Rejected"
+    },
+    {
+      "leave_type": "Sick",
+      "reason": "asdsgsfg",
+      "fromDate": "2023-12-21",
+      "toDate": "2023-12-22",
+      "userid": "7PLPE7d",
+      "id": 8,
+      "status": "Approved"
+    },
+    {
+      "leave_type": "Vacation",
+      "reason": "ghfhgfh",
+      "fromDate": "2023-12-29",
+      "toDate": "2023-12-30",
+      "userid": "1",
+      "id": 9,
+      "status": "Approved"
+    },
+    {
+      "leave_type": "Sick",
+      "reason": "fever",
+      "fromDate": "2023-12-21",
+      "toDate": "2023-12-31",
+      "userid": "_IZNDPf",
+      "id": 10,
+      "status": "Rejected"
+    },
+    {
+      "leave_type": "Maternity",
+      "reason": "hjghjhg",
+      "fromDate": "2023-12-20",
+      "toDate": "2023-12-22",
+      "userid": "lUyJJFq",
+      "id": 11,
+      "status": "Approved"
+    },
+    {
+      "leave_type": "Vacation",
+      "reason": "2day",
+      "fromDate": "2023-12-27",
+      "toDate": "2023-12-30",
+      "userid": "1",
+      "id": 12
+    }
+  ]
+}

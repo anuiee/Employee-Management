@@ -1,0 +1,26 @@
+
+<!-- To display the Leave application sent by employees -->
+
+<h4 class="h4-style">Leave Applications</h4>
+<div *ngFor="let item of jsonData ; index as i">
+    <div class="profile">
+        <div class="profile__header">
+            <div>Status:{{item.status}}</div>
+            <div class="profile__name_head"><h3>Leave Request</h3></div>
+            <div class="buttons">
+            <div><button class="btn btn-primary button-approve"  (click)="approveLeave( item.id )">Approve</button></div>
+            <div><button class="btn btn-danger button-delete"  (click)="rejectLeave( item.id )">Reject</button></div>
+            </div>
+        </div> 
+        <div class="profile__sec2">  
+            <div class="profile__sec2__info">
+                <h6>From:{{ item.userid}}</h6>
+                <h6>Leave Type:{{ item.leave_type}}</h6>
+                <h6>Reason:{{ item.reason }}</h6>
+                <h6>From Date:{{ item.fromDate }}</h6>
+                <h6>To Date:{{ item.toDate }}</h6>
+            </div>
+        </div> 
+        
+    </div>
+    </div>
