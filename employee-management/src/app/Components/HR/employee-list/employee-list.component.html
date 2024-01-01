@@ -10,7 +10,8 @@
         <div  class="profile__id"><h6>ID: {{item.id}}</h6></div>
         <div class="profile__name_head"><h3>{{item.username}}</h3></div>
         <div class="buttons">
-        <div><a routerLink="/{{ item.id }}/edit" >Edit</a></div>
+        <div><a routerLink="/view-leave" (click)="getData(item.id)" >Leaves</a></div>
+        <div><a routerLink="/edit" (click)="getData(item.id)">Edit</a></div>
         <div><button class="btn btn-danger"  (click)="delete( item.id )">Delete</button></div>
         </div>
     </div> 

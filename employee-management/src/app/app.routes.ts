@@ -18,6 +18,9 @@ import { ChangePasswordComponent } from './Components/EMPLOYEE/change-password/c
 import { HrHomeComponent } from './Components/HR/hr-home/hr-home.component';
 import { TotalEmployeesComponent } from './Components/HR/total-employees/total-employees.component';
 import { EmpProfileComponent } from './Components/EMPLOYEE/emp-profile/emp-profile.component';
+import { ViewLeaveComponent } from './Components/HR/view-leave/view-leave.component';
+import { HrAccountComponent } from './Components/HR/hr-account/hr-account.component';
+import { HrPasswordComponent } from './Components/HR/hr-password/hr-password.component';
 
 
 export const routes: Routes = [
@@ -61,13 +64,23 @@ export const routes: Routes = [
         },  {
             path:'hr-home',
             component:HrHomeComponent
-        } 
+        } ,
+        {
+            path:'hr-account',
+            component:HrAccountComponent,
+        },
+       
     ]
     },
     {
-        path:':id/edit',
+        path:'edit',
         canActivate:[authGuard],
         component:EditListComponent
+    },
+    {
+        path:'view-leave',
+        canActivate:[authGuard],
+        component:ViewLeaveComponent
     },
     {
         path:'employee-dashboard',
@@ -75,7 +88,7 @@ export const routes: Routes = [
         component:EmployeeDashboardComponent,
 
         children:[
-        {
+        { 
             path:'emp-leave',
             component:EmpLeaveComponent,
         } ,
@@ -93,8 +106,12 @@ export const routes: Routes = [
         }
     ]
 
-    }
-    ,
+    },   
+        {
+            path:'hr-password',
+            canActivate:[authGuard],
+            component:HrPasswordComponent
+        } ,
         {
             path:'edit-profile',
             canActivate:[authGuard],

@@ -5,12 +5,15 @@ import { EditListComponent } from '../edit-list/edit-list.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ViewLeaveComponent } from '../view-leave/view-leave.component';
+import { PassDataService } from '../../../Services/pass-data.service';
 
 @Component({
   selector: 'app-employee-list',
   standalone: true,
   imports: [CommonModule,
             EditListComponent,
+            ViewLeaveComponent,
             RouterModule,
             RouterOutlet,HttpClientModule,
             FormsModule
@@ -20,7 +23,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './employee-list.component.scss'
 })
 export class EmployeeListComponent {
-  constructor(private jsondatacon:JsonConnectionService){}
+  constructor(private jsondatacon:JsonConnectionService,private passdataService:PassDataService){}
   public jsonData: any;
   public jsonDatabyId :any;
   mySwitch: boolean = false;
@@ -62,7 +65,10 @@ export class EmployeeListComponent {
           });
     }
   
-
+getData(id:any){
+  console.log('list',id);
+  this.passdataService.passData(id);
+}
  
   
 

@@ -4,6 +4,7 @@ import { JsonConnectionService } from '../../../Services/json-connection.service
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PassDataService } from '../../../Services/pass-data.service';
 
 @Component({
   selector: 'app-edit-list',
@@ -16,13 +17,18 @@ import { HttpClientModule } from '@angular/common/http';
 export class EditListComponent {
   empId! :any;
   employee :any;
-    constructor(private route:ActivatedRoute,private jsonService:JsonConnectionService){}
+    constructor(private route:ActivatedRoute,private jsonService:JsonConnectionService,private passdataService:PassDataService){}
 
 
   
     ngOnInit(){
-        this.empId=this.route.snapshot.paramMap.get('id')
+        // this.empId=this.route.snapshot.paramMap.get('id')
         // alert(this.empId);
+        this.passdataService.cast.subscribe((value) => {
+          this.empId = value;
+          console.log('userVal',this.empId);
+          
+        }); 
 
         this.jsonService.getOneData(this.empId).subscribe((res:any)=>{
           console.log(res);
@@ -54,4 +60,6 @@ export class EditListComponent {
         });
         form.reset();
     }
+
+  
 }

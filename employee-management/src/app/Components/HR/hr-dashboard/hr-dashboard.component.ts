@@ -8,6 +8,7 @@ import { LeaveListComponent } from '../leave-list/leave-list.component';
 import { ChartsComponent } from '../../charts/charts.component';
 import { ActivityChartComponent } from '../../activity-chart/activity-chart.component';
 import { HrHomeComponent } from '../hr-home/hr-home.component';
+import { HrAccountComponent } from '../hr-account/hr-account.component';
 
 @Component({
   selector: 'app-hr-dashboard',
@@ -23,13 +24,20 @@ import { HrHomeComponent } from '../hr-home/hr-home.component';
 export class HrDashboardComponent {
   //value:boolean=false;
   comp:any;
+  user:any;
   ngOnInit(){
+    let data:any = localStorage.getItem('token');
+    this.user = JSON.parse(data);
+
     this.comp = HrHomeComponent
   }
 
   detectComp(comp:any){
     if(comp === "hr-home"){
       this.comp = HrHomeComponent
+    }
+    if(comp === "hr-account"){
+      this.comp = HrAccountComponent
     }
     if(comp === "create-employee"){
       this.comp = CreateEmployeeComponent

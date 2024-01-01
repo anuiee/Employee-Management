@@ -21,7 +21,9 @@ export class EmployeeDashboardComponent {
   constructor(public jsondatacon:AuthService,){}
 
   ngOnInit(){
-    this.user= localStorage.getItem('token');
+    let data:any = localStorage.getItem('token');
+    this.user = JSON.parse(data);
+
     this.comp = EmpProfileComponent
     //debugger;
    }

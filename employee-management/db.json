@@ -16,24 +16,24 @@
       "phone": "8921539656",
       "gender": "ghf",
       "image": "C:\\fakepath\\person2.jpg",
-      "password": "1234567",
+      "password": "123456789",
       "dob": "2023-12-23",
       "id": "admin",
       "activity": "Active"
     },
     {
       "username": "Leanne Graham",
-      "age": "23",
+      "age": "18",
       "blood_grp": "O+ve",
-      "gender": "male",
-      "dob": "1999-11-18",
-      "phone": "6547898765",
+      "gender": "female",
+      "dob": "1999-11-22",
+      "phone": "6547867688",
       "image": "C:\\fakepath\\person1.jpg",
       "email": "lena@123",
       "role": "employee",
-      "password": "lenalena123",
+      "password": "45678",
       "id": "1",
-      "activity": "Active"
+      "activity": "Disabled"
     },
     {
       "username": "Abhi",
@@ -47,7 +47,7 @@
       "password": "abhi.123",
       "dob": "1999-12-14",
       "id": "7PLPE7d",
-      "activity": "Active"
+      "activity": "Disabled"
     },
     {
       "username": "surya",
@@ -64,20 +64,6 @@
       "activity": "Disabled"
     },
     {
-      "username": "Jijith JK",
-      "age": "25",
-      "blood_grp": "b+",
-      "gender": "Male",
-      "dob": "2023-12-28",
-      "phone": "6547898765",
-      "image": "C:\\fakepath\\person2.jpg",
-      "email": "jj@k.com",
-      "role": "employee",
-      "password": "jkjkjk",
-      "id": "_IZNDPf",
-      "activity": "Active"
-    },
-    {
       "username": "Anushree Das",
       "age": "25",
       "blood_grp": "gdrf",
@@ -89,6 +75,34 @@
       "role": "employee",
       "password": "anuanu",
       "id": "hqSEncW",
+      "activity": "Active"
+    },
+    {
+      "username": "Anushree Das",
+      "age": "25",
+      "blood_grp": "O+ve",
+      "gender": "Female",
+      "dob": "2023-12-28",
+      "phone": "8921539656",
+      "image": "C:\\fakepath\\2668382.jpg",
+      "email": "anushreedaspt@gmail.com",
+      "role": "admin",
+      "password": "1234567",
+      "id": "v_C6cf5",
+      "activity": "Active"
+    },
+    {
+      "username": "Suryajith Das",
+      "age": "18",
+      "blood_grp": "A+ve",
+      "gender": "Male",
+      "dob": "2006-07-22",
+      "phone": "6547898765",
+      "image": "C:\\fakepath\\person-img.jpg",
+      "email": "surya@2010",
+      "role": "employee",
+      "password": "surya@123",
+      "id": "AOa6uK8",
       "activity": "Active"
     }
   ],
@@ -144,7 +158,16 @@
       "fromDate": "2023-12-27",
       "toDate": "2023-12-30",
       "userid": "1",
-      "id": 12
+      "id": 12,
+      "status": "Approved"
+    },
+    {
+      "leave_type": "Sick",
+      "reason": "fever",
+      "fromDate": "2024-01-16",
+      "toDate": "2024-01-17",
+      "userid": "1",
+      "id": 13
     }
   ]
 }

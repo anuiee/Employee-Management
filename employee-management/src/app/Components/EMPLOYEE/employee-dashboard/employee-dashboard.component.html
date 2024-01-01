@@ -1,8 +1,12 @@
 <!-- This is the employee dashboard window -->
 <div class="container-fluid">
     <div class="hr-navbar">
-        <p class="hr-navbar__code-logo"><i class="bi bi-code-square"></i></p>
-          <h4>EMPLOYEE DASHBOARD</h4>
+        <div class="hr-navbar__code-logo"><i class="bi bi-code-square"></i>
+          <h4>EMPLOYEE DASHBOARD</h4></div>
+          <div class="account-style">
+            <a class="account-style"  (click)="detectComp('emp-settings')">{{ user[0].username }}</a>
+            <img src="./assets/images/profilepic/person-img.jpg" alt="account">
+          </div>
     </div>
 
     <div class="hr-home">
